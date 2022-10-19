@@ -8,7 +8,7 @@ function add(num1: number, num2: number){
 }
 
 // const number1 = '5'; Argument of type 'string' is not assignable to parameter of type 'number'
-const number1 = 5;
+const number1 = 5; //5.0 
 const number2 = 2.8;
 const result = add(number1, number2);
 console.log(result);
@@ -20,4 +20,26 @@ console.log(result);
 // In TypeScript, you work with types like "string", or "number" all times.
 //Important =: It is "string" and "number"(etc), NOT "String" and "Number" etc.
  //The core primitive types in TypeScript are all "lowercase!"
- 
+
+
+ // Working with Numbers, Strings and Booleans.
+
+ function addNum(n1: number, n2: number, showSum: boolean, phrase: string){
+    const result = n1 + n2
+    if(showSum){
+        // console.log(phrase + n1 + n2) produce 410 b/c it become strings
+        // console.log(phrase + result)
+        console.log(`${phrase} ${n1 + n2}`)
+    } else {
+        // return result
+        return n1 + n2
+    }
+ }
+
+ const numberOne =4;
+ const numberTwo= 10;
+ const printSum= true; 
+ const phraseResult = 'Result is: '
+//  const sum = addNum(numberOne,numberTwo, printSum); we don't need b/c of boolean value
+//  console.log(sum);
+addNum(numberOne, numberTwo,printSum,phraseResult );
