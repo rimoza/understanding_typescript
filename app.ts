@@ -12,3 +12,12 @@ const number1 = 5;
 const number2 = 2.8;
 const result = add(number1, number2);
 console.log(result);
+
+
+//JavaScript is a dynamic type (resolved at runtime) while Typescript is a static type (set during development).
+
+//Important: Type Casing
+// In TypeScript, you work with types like "string", or "number" all times.
+//Important =: It is "string" and "number"(etc), NOT "String" and "Number" etc.
+ //The core primitive types in TypeScript are all "lowercase!"
+ 
