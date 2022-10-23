@@ -1,7 +1,7 @@
 //Using types 
 //number => All types of number are same float, decimal and so on
 //string
-//boolean => there is no truthy and falsy types.
+//boolean => there is no truthy and falsy types in TypeScript.
 
 function add(num1: number, num2: number){
     return num1 + num2;
