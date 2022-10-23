@@ -50,7 +50,7 @@ const person2:{
 person2.role.push(1, 'admin')
 // person2.role = ['2'] Type 'string' is not assignable to type 'number'.
 
-/* 
+/* Tuples [1,2] [1, 'hello']
 A tuple is a TypeScript type that works like an array with some special considerations:
  The number of elements of the array is fixed.
  The type of the elements is known. 
