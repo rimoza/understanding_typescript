@@ -31,4 +31,28 @@ for (const hobby of person1.hobbies){
     // console.log(hobby.map()) =>Property 'map' does not exist on type 'string'.
 }
 
-console.log(person1.name)
+console.log(person1.name);
+
+// Working with Tuples
+
+const person2:{
+    name: string;
+    age: number;
+    hobbies: string[];
+    role: [number, string]
+} = {
+    name:'Ridwan Mohammed',
+    age: 25,
+    hobbies: ['cooking', 'playing'], // hobbies: string[]
+    role: [1, 'author']
+};
+
+person2.role.push(1, 'admin')
+// person2.role = ['2'] Type 'string' is not assignable to type 'number'.
+
+/* 
+A tuple is a TypeScript type that works like an array with some special considerations:
+ The number of elements of the array is fixed.
+ The type of the elements is known. 
+ The type of the elements of the array need not be the same.
+*/
