@@ -1,6 +1,8 @@
 // Union Types
-
-function combine (input1: number | string, input2: number | string){
+ // type alianses
+ type Combinable = string | number;
+ type Convertible = 'as-number' | 'as-text'
+function combine (input1: Combinable, input2: Combinable){
     // const result = input1 + input2 Operator '+' cannot be applied to types 'string | number' and 'string | number'.
     // to avoid the above error use type check logic
     let result;
