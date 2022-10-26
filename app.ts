@@ -1,19 +1,26 @@
-// Union Types
+// Literal Types
 
-function combine (input1: number | string, input2: number | string){
-    // const result = input1 + input2 Operator '+' cannot be applied to types 'string | number' and 'string | number'.
-    // to avoid the above error use type check logic
+function combine(input1: number | string, input2: number | string, resultConvertion: string){
     let result;
-    if(typeof input1 === 'number' && typeof input2 === 'number'){
-     result = input1 + input2
+    if(typeof input1 === 'number' && typeof input2 === 'number' || resultConvertion === 'as-number') {
+        result =  +input1 + +input2;
     } else {
-      result =  input1.toString() + input2.toString()
+        result = input1.toString().toLocaleUpperCase() + input2.toString()
     }
-    return result
+    return result;
+    // if(resultConvertion === 'as-number'){
+    //     return +result;
+    // } else {
+    //     return result.toString();
+    // }
+   
 }
 
-const combineAges = combine(30, 26);
-console.log(combineAges);
+const combineAgesLiteral = combine(30, 26, 'as-number');
+console.log(combineAgesLiteral);
 
-const combineNames = combine('Ridwan', 'Mohamed');
-console.log(combineNames)
+const combinedStringAges = combine('30', '26', 'as-number')
+console.log(combinedStringAges);
+
+const combineNamesLiteral = combine('Ahmed', 'Ali', 'as-text');
+console.log(combineNamesLiteral)
